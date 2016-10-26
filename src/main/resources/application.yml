@@ -1,0 +1,48 @@
+spring: 
+  profiles:
+    active: dev
+---
+spring: 
+  profiles: dev
+# DB信息配置  
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    
+  jpa:
+    database: MYSQL
+    show-sql: true
+
+# server信息配置
+server:
+  port: 8081
+  address: localhost
+  context-path: "/dev"
+    
+    
+mongodb: 
+  url: mongodb://localhost:27017/test
+  username: muser
+  password: mpasswd
+
+---
+spring: 
+  profiles: prd
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    
+  jpa:
+    database: MYSQL
+    show-sql: true
+
+server:
+  port: 8081
+  address: localhost
+  context-path: "/"
+

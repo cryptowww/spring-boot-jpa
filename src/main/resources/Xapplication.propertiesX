@@ -1,0 +1,10 @@
+server.port=8099
+
+debug=true
+
+#指定日志文件路径
+#logging.path=./
+logging.file=logfile.log
+logging.level.root=WARN
+logging.level.org.springframework.web=WARN
+logging.level.org.hibernate=ERROR
