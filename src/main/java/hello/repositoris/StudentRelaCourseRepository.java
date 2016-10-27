@@ -5,10 +5,9 @@
  */
 package hello.repositoris;
 
-import java.io.Serializable;
 
-import org.springframework.data.repository.Repository;
-
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
 
 import hello.models.StudentRelaCourseModel;
 
@@ -17,6 +16,7 @@ import hello.models.StudentRelaCourseModel;
  *
  */
 @org.springframework.stereotype.Repository
-public interface StudentRelaCourseRepository extends Repository<StudentRelaCourseModel, Integer>{
+public interface StudentRelaCourseRepository extends JpaRepository<StudentRelaCourseModel, Integer>{
 
+	public StudentRelaCourseModel findByCnoAndSno(String cno,String sno);
 }

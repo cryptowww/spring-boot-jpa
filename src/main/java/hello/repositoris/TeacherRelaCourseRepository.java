@@ -5,9 +5,8 @@
  */
 package hello.repositoris;
 
-import java.io.Serializable;
 
-import org.springframework.data.repository.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import hello.models.TeacherRelaCourseModel;
 
@@ -16,6 +15,6 @@ import hello.models.TeacherRelaCourseModel;
  *
  */
 @org.springframework.stereotype.Repository
-public interface TeacherRelaCourseRepository extends Repository<TeacherRelaCourseModel, Integer> {
+public interface TeacherRelaCourseRepository extends JpaRepository<TeacherRelaCourseModel, Integer> {
 
 }

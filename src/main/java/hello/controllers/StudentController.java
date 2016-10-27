@@ -47,4 +47,27 @@ public class StudentController {
 		log.info("request--from /student/top2");
 		return studentService.retriveTop2();
 	}
+	@RequestMapping("/trans")
+	public String transaction(){
+		String rv = "success transaction";
+		try {
+			studentService.choiceCourceForaNewStudent();
+		} catch (Exception e) {
+			// TODO: handle exception
+			rv = "failed transaction";
+		}
+		return rv;
+	}
+	
+	@RequestMapping("/transRela")
+	public String transactionRela(){
+		String rv = "success transaction";
+		try {
+			studentService.relaTransaction();
+		} catch (Exception e) {
+			// TODO: handle exception
+			rv = "failed transaction";
+		}
+		return rv;
+	}
 }

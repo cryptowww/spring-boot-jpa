@@ -17,7 +17,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "Student")
+@Table(name = "student")
 public class StudentModel {
 
 	@Id
@@ -27,11 +27,12 @@ public class StudentModel {
 	private String firstName ;
 	@Column(name="lastname")
 	private String lastName ;
-	
+	@Column(nullable=false)
 	private int age ;
-	
+	@Column(nullable=false)
 	private String gender ;
 	// 学号
+	@Column(nullable=false)
 	private String sno ;
 	
 	public StudentModel(){

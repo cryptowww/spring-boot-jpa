@@ -5,9 +5,8 @@
  */
 package hello.repositoris;
 
-import java.io.Serializable;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import hello.models.CourseModel;
@@ -17,6 +16,6 @@ import hello.models.CourseModel;
  *
  */
 @Repository
-public interface CourseRepository extends CrudRepository<CourseModel, Integer>{
+public interface CourseRepository extends JpaRepository<CourseModel, Integer>{
 
 }

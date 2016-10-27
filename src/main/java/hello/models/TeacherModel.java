@@ -19,7 +19,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "Teacher")
+@Table(name = "teacher")
 public class TeacherModel  implements Serializable{
 
 	@Id

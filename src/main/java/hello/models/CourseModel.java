@@ -18,7 +18,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "Course")
+@Table(name = "course")
 public class CourseModel implements Serializable{
 
 	@Id

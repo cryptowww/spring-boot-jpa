@@ -7,6 +7,7 @@ package hello.models;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,17 +19,17 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name = "StudentRelaCourse")
+@Table(name = "studentrelacourse") // 尽量都小写，驼峰写法studentRelaCourse后台解析的表名student_rela_course
 public class StudentRelaCourseModel implements Serializable{
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id ;
-	
+	@Column(nullable=false)
 	private String sno;
-	
+	@Column(nullable=false)
 	private String cno;
-	
+	@Column(nullable=false)
 	private float score;
 
 	public StudentRelaCourseModel(){
